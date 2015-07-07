@@ -1,0 +1,22 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               badkeyman
+tagline:             'blog'
+description:         'badkeyman blog'
+url:                 http://badkeyman.github.io
+baseurl:             ''
+paginate:            5
+
+# About/contact
+author:
+  name:              badkeyman 
+  url:               https://twitter.com/badkeyman
+  email:             badkeyman@gmail.com
+
+# Custom vars
+version:             1.0.0
