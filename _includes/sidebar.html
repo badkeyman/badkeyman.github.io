@@ -24,6 +24,20 @@
         {% endif %}
       {% endif %}
     {% endfor %}
+    
+    {% for category in site.categories %}
+    <li class="sidebar-nav-item"><a name="{{ category | first }}">{{ category | first }}</a>
+      <ul>
+      {% for posts in category %}
+        {% for post in posts %}
+          {% if post.title != nil %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
 
 <!--
     <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
@@ -32,6 +46,7 @@
 -->
   </nav>
   
+<!-- category
   <div class="sidebar-item">
     {% for category in site.categories %}
     <li><a name="{{ category | first }}">{{ category | first }}</a>
@@ -47,7 +62,10 @@
     </li>
     {% endfor %}
   </div>
+-->
   
+  
+<!-- tag
   <div class="sidebar-item">
     {% for tag in site.tags %}
     <li><a name="{{ tag | first }}">{{ tag | first }}</a>
@@ -63,6 +81,7 @@
     </li>
     {% endfor %}
   </div>
+-->
   
   <div class="sidebar-item">
     <p>
